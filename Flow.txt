@@ -1,0 +1,23 @@
+Gabbymux
+
+
+1. Create a router.
+2. Route requests
+3. Serve using a specified port.
+
+
+1. How do I Create a router?
+    First of all, how does the default http router work?
+    http.HandleFunc("request_path", Handler)
+
+    gabbymux.HandleFunc("/welcome", Handler)
+
+
+    User gives in the port
+    checks if the port is in use or not
+    if it is use:
+        Flag error
+    if not:
+        continue to use the specified port
+        
+    gabbymux.ListenAndServe("whateverPortTheCoderSpecified")
