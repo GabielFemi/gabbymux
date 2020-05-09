@@ -1,6 +1,5 @@
 package gabbymux
 
-
 import (
 	"errors"
 	"fmt"
@@ -14,11 +13,11 @@ func Router() {
 
 func ListenAndServe(port string) {
 	portIsTaken := isPortTaken("8000")
-	if (!portIsTaken) {
+	if !portIsTaken {
 
-	}else{
+	} else {
 		errors.New("Port has been taken!")
 	}
-	
+	fmt.Println("Hey Buddy, I just want to satisfy this formatter")
 	http.ListenAndServe(port)
 }
